@@ -11,9 +11,9 @@ class TestTaskCollection(unittest.TestCase):
         task_collection = TaskCollection()
         self.assertTrue(task_collection.is_empty())
 
-    def test_set_task(self):
+    def test_append_task(self):
         task_collection = TaskCollection()
-        task_collection.set_task(Task('summary', 'description'))
+        task_collection.append_task(Task('summary', 'description'))
         self.assertFalse(task_collection.is_empty())
 
     def test_get_last_task(self):

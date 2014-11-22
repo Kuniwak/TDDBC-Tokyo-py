@@ -5,7 +5,7 @@ class TaskCollection(object):
     def is_empty(self):
         return self.task_list == []
 
-    def set_task(self, task):
+    def append_task(self, task):
         self.task_list.append(task)
 
     def get_last_task(self):
