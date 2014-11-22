@@ -9,15 +9,11 @@ class TaskAssertion(unittest.TestCase):
 
 
 class TestTask(TaskAssertion):
-    def create_task(self, summary, description):
-        task = Task(summary, description)
-        return task
 
-
-    def test_create_task_with_summary(self):
+    def test_create_task(self):
         summary = 'summary'
         desc = 'aaa'
-        task = self.create_task(summary, desc)
+        task = Task(summary, desc)
         self.assertTaskHasSummaryAndDescription(task, summary, desc)
 
 
