@@ -1,3 +1,3 @@
 class Task(object):
-    def __init__(self, summary=None):
+    def __init__(self, summary):
         self.summary = summary
