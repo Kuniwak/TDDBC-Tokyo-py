@@ -8,12 +8,14 @@ class TestTask(unittest.TestCase):
         self.assertIsInstance(task, Task)
 
     def test_create_task_with_summary(self):
-        task = Task('summary')
-        self.assertEqual(task.summary, 'summary')
+        summary = 'summary'
+        task = Task(summary)
+        self.assertEqual(task.summary, summary)
 
     def test_create_task_with_summary2(self):
-        task = Task('summary1')
-        self.assertEqual(task.summary, 'summary1')
+        summary = 'summary1'
+        task = Task(summary)
+        self.assertEqual(task.summary, summary)
 
 
 if __name__ == '__main__':
