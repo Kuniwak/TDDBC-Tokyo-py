@@ -60,6 +60,14 @@ class TestTaskCollection(unittest.TestCase):
         task_collection = self.create_task_collection_has_a_task()
         self.assertTrue(task_collection.is_available_index(0))
 
+    def test_iter_with_empty_collection(self):
+        task_collection = TaskCollection()
+        self.assertEqual(list(task_collection), [])
+
+    def test_iter_with_not_empty_collection(self):
+        task = Task('summary', 'desc')
+        task_collection = self.create_task_collection_has_a_task(task)
+        self.assertEqual(list(task_collection), [task])
 
 
 if __name__ == '__main__':
