@@ -20,5 +20,16 @@ class TestTaskCollection(unittest.TestCase):
         task_collection = TaskCollection()
         self.assertEqual(task_collection.get_last_task(), None)
 
+    def test_get_task_by_index_with_empty_collection(self):
+        task_collection = TaskCollection()
+        self.assertEqual(task_collection.get_task_by_index(0), None)
+
+    def test_get_task_by_index_with_existent_index(self):
+        task_collection = TaskCollection()
+        task = Task('summary', 'desc')
+        task_collection.append_task(task)
+        self.assertEqual(task_collection.get_task_by_index(0), task)
+
+
 if __name__ == '__main__':
     unittest.main()
