@@ -3,10 +3,6 @@ from task import Task
 
 
 class TestTask(unittest.TestCase):
-    def test_create_task(self):
-        task = Task()
-        self.assertIsInstance(task, Task)
-
     def test_create_task_with_summary(self):
         summary = 'summary'
         task = Task(summary)
